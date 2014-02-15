@@ -1,3 +1,4 @@
+import os,sys
 # takes pdf and writes it to myfile in the same folder
 
 from cStringIO import StringIO
@@ -14,8 +15,12 @@ def to_txt(pdf_path):
     process_pdf(manager, converter, input_)
 
     return output.getvalue() 
-a=to_txt("/home/revatidamle/rev.pdf")
-#print a
-f=open('myfile','w')
-f.write(a)
-f.close()
+path="/home/revatidamle/thesis"
+dirs = os.listdir(path)
+for file_ in dirs:
+	if not file_[:-4] in os.listdir('/home/revatidamle/pdftotext/'):
+		print file_
+		a=to_txt("/home/revatidamle/thesis/"+file_)
+		f=open("/home/revatidamle/pdftotext/"+file_[:-4],"w")
+		f.write(a)
+		f.close()
