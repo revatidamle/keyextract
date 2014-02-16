@@ -30,8 +30,6 @@ for file1 in os.listdir("/home/revatidamle/pdftotext/"):
 			new_dict[i]=new_dict[i]+1;
 		else:
 			new_dict[i]=1;
-
-f1=open("/home/revatidamle/res.txt","w")
 writer = csv.writer(open('res.txt', 'wb'))
 for key, value in new_dict.items():
    writer.writerow([key, value])	
