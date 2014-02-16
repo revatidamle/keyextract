@@ -6,7 +6,7 @@ print vectorizer
 vectorizer.fit_transform(train_set)
 print vectorizer.vocabulary
 
-smatrix = vectorizer.transform(test_set)
+smatrix = vectorizer.transform(train_set)
 
 freq_term_matrix=smatrix.todense()
 print freq_term_matrix
