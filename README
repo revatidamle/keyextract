@@ -1,1 +1,2 @@
-Project is to extract the keywords from a set of documents and use them for efficient searching.
+The code extracts keywords from the query and gives efficient search results from the set of documents provided.
+concepts used: tfidf and cosine similarity
